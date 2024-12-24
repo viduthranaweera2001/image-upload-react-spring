@@ -29,14 +29,12 @@ const CreateProduct = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Prepare form data
         const data = new FormData();
         data.append("name", formData.name);
         data.append("price", formData.price);
         data.append("description", formData.description);
-        data.append("image", formData.image); // Append the image file
+        data.append("image", formData.image);
 
-        // Send POST request to backend
         axios
             .post("http://autorack.proxy.rlwy.net:17847/products", data, {
                 headers: {
@@ -61,7 +59,7 @@ const CreateProduct = () => {
 
     return (
         <div>
-            <h1>Create Product1</h1>
+            <h1>Create Product</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Name:</label>
