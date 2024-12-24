@@ -38,7 +38,7 @@ const CreateProduct = () => {
 
         // Send POST request to backend
         axios
-            .post("http://localhost:8081/products", data, {
+            .post("http://autorack.proxy.rlwy.net:17847/products", data, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
