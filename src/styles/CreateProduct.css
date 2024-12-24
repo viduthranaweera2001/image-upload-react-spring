@@ -1,4 +1,4 @@
-
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,70 +6,81 @@
     font-family: Arial, sans-serif;
 }
 
-/* Form container */
-.create-product-container {
-    background-color: #fff;
+/* Container styles */
+.create-product2-container {
+    background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    margin: auto;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.create-product-container h1 {
+/* Title styles */
+.create-product2-title {
     text-align: center;
+    font-size: 24px;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #333;
 }
 
-.create-product-container div {
+/* Form styles */
+.create-product2-form .form-group {
     margin-bottom: 15px;
 }
 
-.create-product-container label {
+.create-product2-form .form-label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.create-product-container input,
-.create-product-container textarea,
-.create-product-container button {
+.create-product2-form .form-input,
+.create-product2-form .form-textarea,
+.create-product2-form .form-file-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-.create-product-container input:focus,
-.create-product-container textarea:focus {
-    outline: none;
+.create-product2-form .form-input:focus,
+.create-product2-form .form-textarea:focus,
+.create-product2-form .form-file-input:focus {
     border-color: #007bff;
+    outline: none;
 }
 
-.create-product-container textarea {
+.create-product2-form .form-textarea {
     resize: none;
     height: 100px;
 }
 
-.create-product-container button {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.create-product-container button:hover {
-    background-color: #0056b3;
-}
-
-.create-product-container img {
+/* Image preview styles */
+.image-preview {
     display: block;
     margin: 10px auto;
     max-width: 100%;
-    border-radius: 4px;
+    border-radius: 5px;
+}
+
+/* Submit button styles */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
 }

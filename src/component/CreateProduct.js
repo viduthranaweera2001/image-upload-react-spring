@@ -36,7 +36,8 @@ const CreateProduct = () => {
         data.append("image", formData.image);
 
         axios
-            .post("http://autorack.proxy.rlwy.net:17847/products", data, {
+            .post(`${process.env.REACT_APP_BACKEND_URL}/products`, data, {
+            // .post("http://localhost:8081/products", data, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -58,31 +59,64 @@ const CreateProduct = () => {
     };
 
     return (
-        <div>
-            <h1>Create Product2</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Name:</label>
-                    <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+        <div className="create-product2-container">
+            <h1 className="create-product2-title">Create Product2</h1>
+            <form className="create-product2-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label className="form-label">Name:</label>
+                    <input
+                        className="form-input"
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-                <div>
-                    <label>Price:</label>
-                    <input type="number" name="price" value={formData.price} onChange={handleChange} required />
+                <div className="form-group">
+                    <label className="form-label">Price:</label>
+                    <input
+                        className="form-input"
+                        type="number"
+                        name="price"
+                        value={formData.price}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-                <div>
-                    <label>Description:</label>
-                    <textarea name="description" value={formData.description} onChange={handleChange} required />
+                <div className="form-group">
+                    <label className="form-label">Description:</label>
+                    <textarea
+                        className="form-textarea"
+                        name="description"
+                        value={formData.description}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-                <div>
-                    <label>Image:</label>
-                    <input type="file" accept="image/*" onChange={handleImageChange} required />
+                <div className="form-group">
+                    <label className="form-label">Image:</label>
+                    <input
+                        className="form-file-input"
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                        required
+                    />
                 </div>
                 {formData.image && (
-                    <img src={URL.createObjectURL(formData.image)} alt="Preview" />
+                    <img
+                        className="image-preview"
+                        src={URL.createObjectURL(formData.image)}
+                        alt="Preview"
+                    />
                 )}
-                <button type="submit">Create Product</button>
+                <button className="submit-button" type="submit">
+                    Create Product
+                </button>
             </form>
         </div>
+
 
     );
 };
