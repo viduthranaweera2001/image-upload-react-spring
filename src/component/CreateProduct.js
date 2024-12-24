@@ -59,7 +59,7 @@ const CreateProduct = () => {
 
     return (
         <div>
-            <h1>Create Product</h1>
+            <h1>Create Product2</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Name:</label>
